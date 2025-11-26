@@ -8,15 +8,15 @@ The repository is organized into **three main components**:
 
 ### **1. Simulations**
 
-Code to reproduce the neural network simulations described in the manuscript, including model setup, parameter manipulation, and dynamical integration for LIF model.
+Code to reproduce the neural network simulations described in the manuscript, including model setup, parameter manipulation, and dynamical integration for the LIF model.
 
-### **2. Analysis **
+### **2. Analysis**
 
 Scripts to process the simulated data, compute coherence and connectivity metrics, extract spectral features, and run all statistical analyses presented in the paper.
 
-### **3. Figure generation**
+### **3. Figure Generation**
 
-Figure-generation scripts that reproduce all the panels of the main text and supplementary material.
+Scripts to generate all figures from the main manuscript and supplementary material.
 
 ---
 
@@ -28,6 +28,7 @@ Two-networks-coherence-simulations-analysis/
 ├── LIF_network/
 │   ├── analysis/               # Scripts to run LIF simulations and save results
 │   └── neuron_model/           # NEST extension module (NMDA-enabled neuron model)
+│
 ├── analysis/                   # Shared analysis utilities
 ├── figures/                    # Scripts to generate all manuscript figures
 ├── scripts/                    # Additional helper scripts for full pipeline
@@ -75,7 +76,7 @@ pip install -r requirements.txt
 
 ## **Building the Neuron Model (NEST Extension)**
 
-The NMDA-enabled neuron model needs to be compiled before running simulations.
+The NMDA-enabled neuron model must be compiled before running simulations.
 The procedure follows the NEST tutorial *“Writing an extension module”*.
 
 ### **1 — Set the NEST installation directory**
@@ -115,54 +116,55 @@ export LD_LIBRARY_PATH=${NEST_INSTALL_DIR}/lib/python2.7/site-packages/nest:$LD_
 
 ---
 
-Running LIF Network Simulations
+## **Running LIF Network Simulations**
 
-All scripts used to run the LIF network simulations are located in:
+To reproduce the results reported in the paper, adjust the simulation parameters according to the manipulations described in the **Methods** section of the manuscript (e.g., changes in excitability, coupling strength, input levels, or synaptic parameters).
 
-LIF_network/analysis/
+To run a simulation:
 
+```bash
+python3 Network_simulation.py
+```
 
-To reproduce the results reported in the paper, you must adjust the simulation parameters according to the different manipulations described in the Methods section of the manuscript (e.g., changes in excitability, coupling strength, input levels, or synaptic parameters).
+Each simulation outputs:
 
-Once the parameters are set, run the simulation using:
+* the **LFP signal** of the two cortical areas (computed exactly as in the Methods section), and
+* the **population firing-rate traces** of the two excitatory populations.
 
-python3 save_results_1.py
+All outputs are automatically saved in the corresponding results directory in **CSV format**, allowing for easy loading, inspection, and further analysis.
 
+---
 
-Each simulation generates:
+## **Analysis and Figure Generation**
 
-the LFP signal for the two cortical areas (computed exactly as described in the Methods), and
-
-the population firing-rate traces for both excitatory populations.
-
-All outputs are automatically saved in the corresponding results directory in CSV format, allowing for easy loading, inspection, and further analysis.
-## **2. Analysis and Figure Generation**
-
-
-To reproduce manuscript figure related to simulations:
+To reproduce the figures related to the simulations:
 
 ```bash
 python figures/plot_all_figures.py
 ```
 
-Figures will be saved in high resolution in the `figures/output/` directory.
+Figures will be saved in high resolution in the directory:
+
+```
+figures/output/
+```
 
 ---
 
 # **Reproducibility Notes**
 
-* All simulations can be reproduced with the default parameters.
+* All simulations can be reproduced using the default parameters.
 * Random seeds are fixed inside the scripts when relevant.
 
 ---
 
 # **Citation**
 
-If you use this code, please cite the paper:
+If you use this code, please cite:
 
-***Cortical excitability inversely modulates fMRI connectivity***
+***“Cortical excitability inversely modulates fMRI connectivity”***
 *Authors, Year*
-*Journal: PLOS Computational Biology*
+*PLOS Computational Biology*
 
 (Insert citation once DOI is available.)
 
@@ -179,5 +181,13 @@ This repository is released under the **MIT License**, allowing broad reuse with
 For questions, issues, or suggestions:
 
 **Gabriele Mancini**
-Email: mancinigabriele814@gmail.com
+Email: **[mancinigabriele814@gmail.com](mailto:mancinigabriele814@gmail.com)**
 
+---
+
+If you want, I can now:
+
+✅ generate a `requirements.txt`
+✅ generate a `CITATION.cff`
+✅ fix internal folder descriptions or update according to actual repo content
+Just tell me!
