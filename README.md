@@ -8,9 +8,9 @@ The repository is organized into **three main components**:
 
 ### **1. Simulations**
 
-Code to reproduce the neural network simulations described in the manuscript, including model setup, parameter manipulation, and dynamical integration for both LIF and multicompartment models.
+Code to reproduce the neural network simulations described in the manuscript, including model setup, parameter manipulation, and dynamical integration for LIF model.
 
-### **2. Analysis**
+### **2. Analysis **
 
 Scripts to process the simulated data, compute coherence and connectivity metrics, extract spectral features, and run all statistical analyses presented in the paper.
 
