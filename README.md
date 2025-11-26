@@ -215,11 +215,4 @@ For questions, issues, or suggestions:
 **Gabriele Mancini**
 Email: **[mancinigabriele814@gmail.com](mailto:mancinigabriele814@gmail.com)**
 
----
 
-If you want, I can now:
-
-✅ generate a `requirements.txt`
-✅ generate a `CITATION.cff`
-✅ fix internal folder descriptions or update according to actual repo content
-Just tell me!
