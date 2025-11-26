@@ -135,19 +135,51 @@ All outputs are automatically saved in the corresponding results directory in **
 
 ---
 
-## **Analysis and Figure Generation**
+### Coherence and Firing Rate Analysis**
 
-To reproduce the figures related to the simulations:
+## **Coherence Analysis**
+Once you have simulated the network, you can compute the coherence by running:
 
-```bash
-python figures/plot_all_figures.py
+```matlab
+analysis_coherence.m
 ```
 
-Figures will be saved in high resolution in the directory:
+in MATLAB. Make sure to adjust the file paths to point to the correct input CSV files.
 
+The script processes the firing-rate and LFP data and returns a MATLAB `.mat` file containing all the results, ready for plotting or further analysis.
+
+---
+
+## **Firing Rate Analysis**
+
+Once the network has been simulated, you can process the firing-rate traces using:
+
+```matlab
+analysis_firing_rate.m
 ```
-figures/output/
-```
+
+in MATLAB.
+
+**Instructions:**
+
+1. Make sure the script points to the correct CSV input files from the simulations and adjust for number of trials:
+
+   * `firing_rate_trace_trial1.csv` … `firing_rate_trace_trial5.csv` for **Control**
+   * `firing_rate_trace_trial1.csv` … `firing_rate_trace_trial5.csv` for **Manipulation**
+
+2. Run the script in MATLAB.
+
+3. The script will:
+
+   * Chunk and average the firing-rate traces,
+   * Compute baseline-normalized firing rates,
+   * Save a MATLAB `.mat` file containing:
+
+     * `data`: raw firing-rate chunks
+     * `data_z`: baseline-normalized firing-rate chunks
+
+This `.mat` file is ready for downstream analysis or plotting.
+
 
 ---
 
