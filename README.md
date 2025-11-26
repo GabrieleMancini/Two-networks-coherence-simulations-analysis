@@ -1,10 +1,3 @@
-Here is a **complete, polished, publication-grade README** for your repository
-**Two-networks-coherence-simulations-analysis**, fully integrating all the text you provided and expanding it into a clear, professional structure suitable for a scientific code release.
-
-You can paste this directly into `README.md`.
-
----
-
 # **Two-networks-coherence-simulations-analysis**
 
 This repository contains the full codebase used to generate the simulations, perform the analyses, and produce all figures for the paper:
@@ -35,10 +28,6 @@ Two-networks-coherence-simulations-analysis/
 ├── LIF_network/
 │   ├── analysis/               # Scripts to run LIF simulations and save results
 │   └── neuron_model/           # NEST extension module (NMDA-enabled neuron model)
-│
-├── multicompartment_network/
-│   └── analysis/               # Multicompartment simulations (NEURON + MPI)
-│
 ├── analysis/                   # Shared analysis utilities
 ├── figures/                    # Scripts to generate all manuscript figures
 ├── scripts/                    # Additional helper scripts for full pipeline
@@ -65,7 +54,6 @@ Main Python packages:
 External simulation environments:
 
 * [**NEST Simulator**](https://nest-simulator.readthedocs.io/en/stable/) v3.3
-* [**NEURON**](https://neuron.yale.edu/neuron/) (for multicompartment model simulations)
 
 ---
 
@@ -93,7 +81,7 @@ The procedure follows the NEST tutorial *“Writing an extension module”*.
 ### **1 — Set the NEST installation directory**
 
 ```bash
-export NEST_INSTALL_DIR=/Users/pablo/NEST/ins
+export NEST_INSTALL_DIR=/Users/gabriele/NEST/ins
 ```
 
 ### **2 — Create and enter the build directory**
@@ -229,16 +217,5 @@ This repository is released under the **MIT License**, allowing broad reuse with
 For questions, issues, or suggestions:
 
 **Gabriele Mancini**
-Email: *[insert your email]*
-GitHub: *[your GitHub profile]*
+Email: mancinigabriele814@gmail.com
 
----
-
-If you'd like, I can also:
-
-✅ add a `requirements.txt`
-✅ create a `CITATION.cff` file
-✅ generate a workflow diagram
-✅ generate a quick-start short version for the README top
-
-Just tell me!
