@@ -133,49 +133,10 @@ Results are automatically saved in the corresponding output directory.
 
 ---
 
-# **Multicompartment Model Network**
+## **2. Analysis and Figure Generation**
 
-Simulation scripts are located in:
 
-```
-multicompartment_network/analysis/
-```
-
-To run a simulation:
-
-```bash
-python3 simulation_1.py
-```
-
-To speed up execution using MPI:
-
-```bash
-mpirun -np 8 python3 simulation_1.py
-```
-
----
-
-# **General Pipeline: Running the Code**
-
-## **1. Data Generation**
-
-Use the scripts in the `scripts/` or simulation folders to generate data, depending on the model:
-
-```bash
-python scripts/run_simulation.py
-```
-
-## **2. Analysis**
-
-Once data are generated, run the analysis scripts:
-
-```bash
-python analysis/run_full_analysis.py
-```
-
-## **3. Figure Generation**
-
-To reproduce all manuscript figures:
+To reproduce manuscript figure related to simulations:
 
 ```bash
 python figures/plot_all_figures.py
@@ -189,8 +150,6 @@ Figures will be saved in high resolution in the `figures/output/` directory.
 
 * All simulations can be reproduced with the default parameters.
 * Random seeds are fixed inside the scripts when relevant.
-* Some multicompartment simulations require significant computational resources.
-* MPI execution is recommended for NEURON-based simulations.
 
 ---
 
