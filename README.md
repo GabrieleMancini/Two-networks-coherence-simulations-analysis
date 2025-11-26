@@ -115,24 +115,27 @@ export LD_LIBRARY_PATH=${NEST_INSTALL_DIR}/lib/python2.7/site-packages/nest:$LD_
 
 ---
 
-## **Running LIF Network Simulations**
+Running LIF Network Simulations
 
-Simulation scripts are stored in:
+All scripts used to run the LIF network simulations are located in:
 
-```
 LIF_network/analysis/
-```
 
-Adjust the parameters in the script and run:
 
-```bash
+To reproduce the results reported in the paper, you must adjust the simulation parameters according to the different manipulations described in the Methods section of the manuscript (e.g., changes in excitability, coupling strength, input levels, or synaptic parameters).
+
+Once the parameters are set, run the simulation using:
+
 python3 save_results_1.py
-```
 
-Results are automatically saved in the corresponding output directory.
 
----
+Each simulation generates:
 
+the LFP signal for the two cortical areas (computed exactly as described in the Methods), and
+
+the population firing-rate traces for both excitatory populations.
+
+All outputs are automatically saved in the corresponding results directory in CSV format, allowing for easy loading, inspection, and further analysis.
 ## **2. Analysis and Figure Generation**
 
 
