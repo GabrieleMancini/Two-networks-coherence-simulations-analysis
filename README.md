@@ -8,32 +8,15 @@ The repository is organized into **three main components**:
 
 ### **1. Simulations**
 
-Code to reproduce the neural network simulations described in the manuscript, including model setup, parameter manipulation, and dynamical integration for the LIF model.
+Code to reproduce the neural network simulations described in the manuscript.
 
 ### **2. Analysis**
 
-Scripts to process the simulated data, compute coherence and connectivity metrics, extract spectral features, and run all statistical analyses presented in the paper.
+Scripts to process the simulated data, compute coherence and firing rates, and run all statistical analyses presented in the paper.
 
 ### **3. Figure Generation**
 
-Scripts to generate all figures from the main manuscript and supplementary material.
-
----
-
-## **Repository Structure**
-
-```
-Two-networks-coherence-simulations-analysis/
-│
-├── LIF_network/
-│   ├── analysis/               # Scripts to run LIF simulations and save results
-│   └── neuron_model/           # NEST extension module (NMDA-enabled neuron model)
-│
-├── analysis/                   # Shared analysis utilities
-├── figures/                    # Scripts to generate all manuscript figures
-├── scripts/                    # Additional helper scripts for full pipeline
-└── README.md
-```
+Scripts to generate all the panels of the figure X.
 
 ---
 
