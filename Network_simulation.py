@@ -30,7 +30,7 @@ discarded = 500.
 LFP_signal_1 = np.zeros((n_trials+1,interval-1))
 LFP_signal_2 = np.zeros((n_trials+1,interval-1))
 
-nest.Install('mymodule_NMDA')
+nest.Install('mymodule')
 
 for trial in range(n_trials):
 
@@ -83,24 +83,6 @@ for trial in range(n_trials):
     g_L=25.0
 
 
-    #### NMDAPARAMETERS ###
-
-    alpha_e_1=0.
-    alpha_i_1=0.
-
-    beta_e_1=8.5
-    beta_i_1=8.5
-
-    alpha_e_2=0.
-    alpha_i_2=0.
-
-    beta_e_2=10.
-    beta_i_2=10.
-
-    factor_inter_exc= 1.0
-    factor_inter_inh= 1.0
-
-
     #######################
 
     def variable_param(mean, std=None):
@@ -132,11 +114,7 @@ for trial in range(n_trials):
         "tau_rise_GABA_A": variable_param(0.25, 0.01),
         "tau_decay_GABA_A": variable_param(5.0, 0.01),  # moderate variance
         "tau_m": variable_param(20.0, 0.01),
-        "I_e": 0.0,
-        "tau_rise_NMDA": variable_param(2.0, 0.01),
-        "tau_decay_NMDA": variable_param(100.0, 10.0),  # slow kinetics, wider range
-        "NMDA": beta_e_1,
-        "S_act_NMDA": variable_param(alpha_e_1, 0.01)
+        "I_e": 0.0
     }
 
     inhibitory_cell_params_1 = {
@@ -153,11 +131,7 @@ for trial in range(n_trials):
         "tau_rise_GABA_A": variable_param(0.25, 0.01),
         "tau_decay_GABA_A": variable_param(5.0, 0.01),
         "tau_m": variable_param(10.0, 0.01),
-        "I_e": 0.0,
-        "tau_rise_NMDA": variable_param(2.0, 0.01),
-        "tau_decay_NMDA": variable_param(100.0, 10.0),
-        "NMDA": beta_i_1,
-        "S_act_NMDA": variable_param(alpha_i_1, 0.01)
+        "I_e": 0.0
     }
 
     excitatory_cell_params_2 = {
@@ -174,11 +148,7 @@ for trial in range(n_trials):
         "tau_rise_GABA_A": variable_param(0.25, 0.01),
         "tau_decay_GABA_A": variable_param(5.0, 0.01),  # moderate variance
         "tau_m": variable_param(20.0, 0.01),
-        "I_e": 0.0,
-        "tau_rise_NMDA": variable_param(2.0, 0.01),
-        "tau_decay_NMDA": variable_param(100.0, 10.0),  # slow kinetics, wider range
-        "NMDA": beta_e_1,
-        "S_act_NMDA": variable_param(alpha_e_1, 0.01)
+        "I_e": 0.0
     }
 
     inhibitory_cell_params_2 = {
@@ -195,11 +165,7 @@ for trial in range(n_trials):
         "tau_rise_GABA_A": variable_param(0.25, 0.01),
         "tau_decay_GABA_A": variable_param(5.0, 0.01),
         "tau_m": variable_param(10.0, 0.01),
-        "I_e": 0.0,
-        "tau_rise_NMDA": variable_param(2.0, 0.01),
-        "tau_decay_NMDA": variable_param(100.0, 10.0),
-        "NMDA": beta_i_1,
-        "S_act_NMDA": variable_param(alpha_i_1, 0.01)
+        "I_e": 0.0
     }
 
     # Parameters of Synapses
@@ -225,8 +191,8 @@ for trial in range(n_trials):
     inh_exc_recurrent_2 = -2.01    # nS
 
 
-    inter_exc_exc = factor_inter_exc * 0.178
-    inter_exc_inh = factor_inter_inh * 0.233
+    inter_exc_exc =  0.178
+    inter_exc_inh =  0.233
 
 
     th_exc_external = 0.234     # nS
@@ -252,7 +218,7 @@ for trial in range(n_trials):
                  ##############################################################################
 
 
-                                      ### CREATION OF THER NETWORK ###
+                                      ### CREATION OF THE NETWORK ###
 
 
                  ###############################################################################
