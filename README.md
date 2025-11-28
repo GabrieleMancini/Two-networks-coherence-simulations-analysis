@@ -55,11 +55,11 @@ pip install -r requirements.txt
 
 ---
 
-# **LIF Model Network with NMDA**
+# **LIF Model Network **
 
 ## **Building the Neuron Model (NEST Extension)**
 
-The NMDA-enabled neuron model must be compiled before running simulations.
+The neuron model must be compiled before running simulations.
 The procedure follows the NEST tutorial *“Writing an extension module”*.
 
 ### **1 — Set the NEST installation directory**
