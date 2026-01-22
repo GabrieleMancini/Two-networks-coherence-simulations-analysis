@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ---
 
-# **LIF Model Network **
+**LIF Model Network **
 
 ## **Building the Neuron Model (NEST Extension)**
 
