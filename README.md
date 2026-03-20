@@ -1,4 +1,4 @@
-# **Two-networks-coherence-simulations-analysis**
+# **Three-networks-coherence-simulations-analysis**
 
 This repository contains the full codebase used to generate the simulations, perform the analyses, and produce all figures for the paper:
 
@@ -112,7 +112,7 @@ python3 Network_simulation.py
 Each simulation outputs:
 
 * the **LFP signal** of the two cortical areas (computed exactly as in the Methods section), and
-* the **population firing-rate traces** of the two excitatory populations.
+* the **population firing-rate traces** of the two excitatory populations of the netwroks we compute the coherence about (PFC,RS).
 
 All outputs are automatically saved in the corresponding results directory in **CSV format**, allowing for easy loading, inspection, and further analysis.
 
