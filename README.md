@@ -106,7 +106,7 @@ To reproduce the results reported in the paper, adjust the simulation parameters
 To run a simulation:
 
 ```bash
-python3 Network_simulation.py
+python3 three_populatins_model.py
 ```
 
 Each simulation outputs:
