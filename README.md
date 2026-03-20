@@ -171,14 +171,14 @@ This section describes how to reproduce the simulations underlying **Supplementa
 
 ### **Overview**
 
-Supplementary Figure 1 illustrates how key intrinsic properties of excitatory neurons — specifically **synaptic conductance** and **resting membrane potential** — modulate network activity within a single E/I module. These simulations serve as a foundational characterisation of the single-network dynamics before the full three-network model is introduced.
+Supplementary Figure 1 illustrates how key intrinsic properties of excitatory neurons, specifically **synaptic conductance** and **resting membrane potential**, modulate network activity within a single E/I module. These simulations serve as a foundational characterisation of the single-network dynamics before the full three-network model is introduced.
 
 ### **Network Model and Simulations**
 
 The single-module network model and all instructions needed to run it are hosted in a separate repository:
 
 > **Bertelsen et al. — GitHub repository:**
-> [INSERT LINK HERE]
+> https://github.com/GabrieleMancini/Bertelsen_et_al
 
 Please refer to that repository for:
 
