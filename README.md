@@ -2,7 +2,7 @@
 
 This repository contains the full codebase used to generate the simulations, perform the analyses, and produce all figures for the paper:
 
-***“Cortical excitability inversely modulates fMRI connectivity”***
+***"Cortical excitability inversely modulates fMRI connectivity"***
 
 The repository is organized into **three main components**:
 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ## **Building the Neuron Model (NEST Extension)**
 
 The neuron model must be compiled before running simulations.
-The procedure follows the NEST tutorial *“Writing an extension module”*.
+The procedure follows the NEST tutorial *"Writing an extension module"*.
 
 ### **1 — Set the NEST installation directory**
 
@@ -163,6 +163,45 @@ in MATLAB.
 
 This `.mat` file is ready for downstream analysis or plotting.
 
+---
+
+## **Single Network Module — Supplementary Figure 1**
+
+This section describes how to reproduce the simulations underlying **Supplementary Figure 1**, which characterizes the behaviour of a single network module composed of one recurrently connected population of excitatory (E) and inhibitory (I) neurons.
+
+### **Overview**
+
+Supplementary Figure 1 illustrates how key intrinsic properties of excitatory neurons — specifically **synaptic conductance** and **resting membrane potential** — modulate network activity within a single E/I module. These simulations serve as a foundational characterisation of the single-network dynamics before the full three-network model is introduced.
+
+### **Network Model and Simulations**
+
+The single-module network model and all instructions needed to run it are hosted in a separate repository:
+
+> **Bertelsen et al. — GitHub repository:**
+> [INSERT LINK HERE]
+
+Please refer to that repository for:
+
+* a full description of the single E/I network model,
+* instructions for setting up and running the simulations,
+* details on how to vary synaptic conductance and excitatory neuron resting potential across conditions, and
+* instructions for saving simulation outputs to the appropriate directories.
+
+Follow the repository's instructions to run the desired parameter manipulations and save the network outputs before proceeding to the analysis step below.
+
+### **Generating Supplementary Figure 1**
+
+Once the simulations have been run and outputs saved, Supplementary Figure 1 can be reproduced using the MATLAB script:
+
+```matlab
+supplementary_1.m
+```
+
+**Instructions:**
+
+1. Open `supplementary_1.m` in MATLAB.
+2. Modify the file paths at the top of the script to point to the directories containing the simulation outputs produced by the Bertelsen et al. model.
+3. Run the script. It will load the simulation data, perform the relevant analyses, and generate all panels of Supplementary Figure 1.
 
 ---
 
@@ -177,7 +216,7 @@ This `.mat` file is ready for downstream analysis or plotting.
 
 If you use this code, please cite:
 
-***“Cortical excitability inversely modulates fMRI connectivity”***
+***"Cortical excitability inversely modulates fMRI connectivity"***
 *Authors, Year*
 *PLOS Computational Biology*
 
@@ -197,5 +236,3 @@ For questions, issues, or suggestions:
 
 **Gabriele Mancini**
 Email: **[mancinigabriele814@gmail.com](mailto:mancinigabriele814@gmail.com)**
-
-
